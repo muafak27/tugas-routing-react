@@ -2,12 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import IndexHome from './Component/diHome';
+import About from './Component/diAbout';
+import Category from './Component/Category';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<App />}>
+        <Route path='home' element={<IndexHome/>}></Route>
+        <Route path='about' element={<About/>}></Route>
+        <Route path='category/:name' element={<Category/>}></Route>
+      </Route>
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

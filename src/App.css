@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.belajar {
+  text-align: center;
+  margin: 20px;
+}
+.link {
+  margin-right : 20px;
+  padding: 30px;
+}
+.navbar{
+  padding: 20px;
+}
